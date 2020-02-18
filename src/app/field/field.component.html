@@ -1,18 +1,19 @@
 <div class="mt-5 row justify-content-center align-items-center">
-  <h1 *ngIf="!state.winner && !state.isDraw">{{state.currentPlayer.name}}</h1>
-  <h1 *ngIf="state.winner">{{state.winner.name}} won 
+  <h1 *ngIf="!state.winner && !state.isDraw">{{ state.currentPlayer.name }}</h1>
+  <h1 *ngIf="state.winner">
+    {{ state.winner.name }} won
     <span *ngIf="!state.currentPlayer.isNPC">🎉</span>
     <span *ngIf="state.currentPlayer.isNPC">🤬</span>
   </h1>
   <h1 *ngIf="state.isDraw">Nobody wins 😬</h1>
 </div>
 
-<div class="mt-5 row justify-content-center align-items-center">
-  <div class="row" *ngFor="let row of state.rows">
-    <div class="col-" *ngFor="let box of row">
-      <app-box [box]="box" (boxChecked)="onBoxChecked($event)"></app-box>
+<div class="mt-5  justify-content-center align-items-center">
+    <div class="row d-flex justify-content-center" *ngFor="let row of state.rows">
+      <div class="col-" *ngFor="let box of row">
+        <app-box [box]="box" (boxChecked)="onBoxChecked($event)"></app-box>
+      </div>
     </div>
-  </div>
 </div>
 
 <div class="mt-5 row justify-content-center align-items-center">
