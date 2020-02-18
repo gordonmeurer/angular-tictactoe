@@ -1,0 +1,12 @@
+.box {
+    height: 6em;
+    width: 6em;
+    box-shadow: 1px 1px 1px 1px #898989;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    max-width: 50%;
+}
