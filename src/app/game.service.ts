@@ -26,7 +26,7 @@ export class GameService {
     if (this.game.currentPlayer.isNPC) {
       setTimeout(() => {
         this.makeRandomMove();
-      }, 500);
+      }, 1500);
     }
     this.store.update(this.game);
   }
