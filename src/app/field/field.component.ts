@@ -28,7 +28,7 @@ export class FieldComponent implements OnInit, OnDestroy {
   }
 
   onBoxChecked(box: Box) {
-    if (this.state.winner) {
+    if (this.state.winner || this.state.currentPlayer.isNPC) {
       return;
     }
     this.service.makeMove(box);
